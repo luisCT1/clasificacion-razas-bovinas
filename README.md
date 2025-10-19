@@ -39,16 +39,18 @@ if (length(to_install)) install.packages(to_install, dependencies = TRUE)
 ## 🧠 Metodología
 
 1. **Adquisición de datos:**
-   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzera**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos.
-2. **Preprocesamiento:**
+   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzera**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos. El dataset usando esta disponible en: [IMAGENES]([mailto:lcohent@unal.edu.co](https://drive.google.com/drive/folders/1Jv9btsy1kgfs8yK68l-QfSU1LKD4UawZ?usp=sharing) 
+
+   
+3. **Preprocesamiento:**
 
    * Redimensionado a `160x160` píxeles.
    * Conversión a escala de grises con `magick`.
-3. **Extracción de características:**
+4. **Extracción de características:**
 
    * Uso del descriptor **HOG (Histogram of Oriented Gradients)** implementado con `OpenImageR::HOG`.
    * Parámetros: celdas = 8, orientaciones = 9.
-4. **Entrenamiento:**
+5. **Entrenamiento:**
 
    * División de datos (80% entrenamiento / 20% prueba por raza).
    * Modelo **Random Forest (`ranger`)** con:
@@ -57,12 +59,12 @@ if (length(to_install)) install.packages(to_install, dependencies = TRUE)
      * `mtry = sqrt(#features)`
      * `probability = TRUE`
      * `importance = "impurity"`
-5. **Evaluación:**
+6. **Evaluación:**
 
    * Cálculo de métricas (`yardstick::metrics`).
    * Matriz de confusión (`caret::confusionMatrix`).
    * Visualización de resultados con `ggplot2` y `gt`.
-6. **Predicción individual:**
+7. **Predicción individual:**
 
    * La función `predictor_imagen()` permite evaluar una imagen nueva y obtener la raza y probabilidad de clasificación.
 
