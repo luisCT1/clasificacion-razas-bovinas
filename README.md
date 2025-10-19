@@ -39,7 +39,7 @@ if (length(to_install)) install.packages(to_install, dependencies = TRUE)
 ## 🧠 Metodología
 
 1. **Adquisición de datos:**
-   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzera**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos. El dataset usando esta disponible en: **[Descargar dataset desde Google Drive](https://drive.google.com/drive/folders/1Jv9btsy1kgfs8yK68l-QfSU1LKD4UawZ?usp=sharing)**
+   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzera**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos. El dataset usando esta disponible en: **[Descargar dataset desde Google Drive](https://drive.google.com/drive/folders/10xaSyEvKPO9y59YrHvT2lZJTuNpB-1YJ?usp=sharing)**
 
    
 3. **Preprocesamiento:**
