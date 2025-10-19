@@ -93,6 +93,8 @@ Formatos aceptados: `.jpg`, `.jpeg`, `.png`.
 
 ### 1️⃣ Clonar el repositorio
 
+Abre un scrip en r y ejecuta la siguiente línea de código:
+
 ```bash
 system("git clone https://github.com/luisCT1/clasificacion-razas-bovinas.git")
 ```
