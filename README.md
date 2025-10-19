@@ -120,7 +120,7 @@ Esto:
 
 ### 4️⃣ Predicción sobre una imagen nueva
 
-asegurate que sea una imagen que no fue usada para entrenar el modelo.
+asegurate que sea una imagen que no fue usada para entrenar el modelo, para ello se incluyenron unos ejemplos (1, 2, 3, 4 y 5, todas en formato .jpg).
 
 ```r
 img_path <- "5.JPG"
