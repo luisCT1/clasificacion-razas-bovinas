@@ -96,8 +96,12 @@ Formatos aceptados: `.jpg`, `.jpeg`, `.png`.
 Abre un scrip en r y ejecuta la siguiente línea de código:
 
 ```bash
-system("git clone https://github.com/luisCT1/clasificacion-razas-bovinas.git")
+install.packages("gert")
+library(gert)
+
+gert::git_clone("https://github.com/luisCT1/clasificacion-razas-bovinas.git", path = "clasificacion_razas_bovinas")
 ```
+esto te creará una carpeta llamada "clasificacion_razas_bovinas" en documentos, en ella debes agregar la carpeta "imagenes" (que contiene las subcarpetar por raza con las imágenes)
 
 ### 2️⃣ Abrir en R o RStudio
 
