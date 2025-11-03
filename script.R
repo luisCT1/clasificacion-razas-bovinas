@@ -22,7 +22,7 @@ set.seed(123)
 
 #configuracion inicial
 imagenes <- "imagenes"                       
-subcarpetas  <- c("BRAHMAN","GUZERA","HOLSTEIN")
+subcarpetas  <- c("BRAHMAN","GUZERAT","HOLSTEIN")
 tamano_imagen <- 160 # tamaño estandar de las imagenes 160*160
 
 #cantidad de imagenes por carpeta
@@ -145,4 +145,5 @@ resultado <- predecir_raza(imagen_prueba, clases = subcarpetas)
 
 resultado$raza_predicha
 round(resultado$probabilidad, 4)
+
 
