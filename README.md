@@ -1,7 +1,7 @@
 # 🐄 Clasificador de Razas Bovinas (HOG + Random Forest con ranger)
 
 Este proyecto es un **ejemplo práctico de aplicación de Inteligencia Artificial en producción animal**, orientado a la **clasificación automática de razas bovinas** a partir de imágenes.
-El objetivo es mostrar cómo combinar la **visión por computadora** y **aprendizaje automático clásico** en **R** para clasificar imagenes de razas bovinas (Brahman, Guzará y Holstins, integrando **HOG (Histogram of Oriented Gradients)** y el modelo **Random Forest** mediante el paquete `ranger`.
+El objetivo es mostrar cómo combinar la **visión por computadora** y **aprendizaje automático clásico** en **R** para clasificar imagenes de razas bovinas (Brahman, Guzerat y Holstins, integrando **HOG (Histogram of Oriented Gradients)** y el modelo **Random Forest** mediante el paquete `ranger`.
 
 ---
 
@@ -39,7 +39,7 @@ if (length(to_install)) install.packages(to_install, dependencies = TRUE)
 ## 🧠 Metodología
 
 1. **Adquisición de datos:**
-   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzera**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos. El dataset usando esta disponible en: **[Descargar dataset desde Google Drive](https://drive.google.com/drive/folders/10xaSyEvKPO9y59YrHvT2lZJTuNpB-1YJ?usp=sharing)**
+   Las imágenes usadas en este protecto fueron sacadas de internet, estas correspondientes a tres razas bovinas (**Brahman**, **Guzerat**, **Holstein**) organizadas en subcarpetas, cada una con 488 imagenes, esto para asegurar un balance en los datos. El dataset usando esta disponible en: **[Descargar dataset desde Google Drive](https://drive.google.com/drive/folders/10xaSyEvKPO9y59YrHvT2lZJTuNpB-1YJ?usp=sharing)**
 
    
 3. **Preprocesamiento:**
@@ -77,7 +77,7 @@ imagenes/
 ├── BRAHMAN/
 │   ├── img_001.jpg
 │   └── ...
-├── GUZERA/
+├── GUZERAT/
 │   ├── img_001.jpg
 │   └── ...
 └── HOLSTEIN/
@@ -129,7 +129,7 @@ asegurate que sea una imagen que no fue usada para entrenar el modelo, para ello
 
 ```r
 img_path <- "5.JPG"
-prediccion_nueva <- predictor_imagen(img_path, clases = c("BRAHMAN","GUZERA","HOLSTEIN"))
+prediccion_nueva <- predictor_imagen(img_path, clases = c("BRAHMAN","GUZERAT","HOLSTEIN"))
 
 prediccion_nueva$raza
 round(prediccion_nueva$prob, 4)
@@ -168,9 +168,9 @@ El modelo logra una clasificación sólida entre las tres razas, alcanzando una 
 
 ```
           Reference
-Prediction BRAHMAN GUZERA HOLSTEIN
+Prediction BRAHMAN GUZERAT HOLSTEIN
   BRAHMAN       76     16        6
-  GUZERA        12     65       11
+  GUZERAT       12     65       11
   HOLSTEIN      10     17       81
 ```
 
@@ -179,7 +179,7 @@ Prediction BRAHMAN GUZERA HOLSTEIN
 | Clase    | Sensibilidad | Especificidad | F1    | Exactitud balanceada |
 | -------- | ------------ | ------------- | ----- | -------------------- |
 | Brahman  | 0.7755       | 0.8878        | 0.776 | 0.832                |
-| Guzera   | 0.6633       | 0.8827        | 0.739 | 0.773                |
+| Guzerat  | 0.6633       | 0.8827        | 0.739 | 0.773                |
 | Holstein | 0.8265       | 0.8622        | 0.750 | 0.844                |
 
 **Resumen general:**
@@ -215,7 +215,7 @@ En este sentido, el flujo de trabajo presentado (extracción de características
 .
 ├── imagenes/               # Datos de entrada
 │   ├── BRAHMAN/
-│   ├── GUZERA/
+│   ├── GUZERAT/
 │   └── HOLSTEIN/
 ├── 5.jpg                # imagen nueva a clasificar
 ├── script.R                # Código principal
