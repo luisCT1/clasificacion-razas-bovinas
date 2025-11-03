@@ -1,7 +1,7 @@
 # 🐄 Clasificador de Razas Bovinas (HOG + Random Forest con ranger)
 
 Este proyecto es un **ejemplo práctico de aplicación de Inteligencia Artificial en producción animal**, orientado a la **clasificación automática de razas bovinas** a partir de imágenes.
-El objetivo es mostrar cómo combinar la **visión por computadora** y **aprendizaje automático clásico** en **R** para clasificar imagenes de razas bovinas (Brahman, Guzerat y Holstins, integrando **HOG (Histogram of Oriented Gradients)** y el modelo **Random Forest** mediante el paquete `ranger`.
+El objetivo es mostrar cómo combinar la **visión por computadora** y **aprendizaje automático clásico** en **R** para clasificar imagenes de razas bovinas (Brahman, Guzerat y Holstein, integrando **HOG (Histogram of Oriented Gradients)** y el modelo **Random Forest** mediante el paquete `ranger`.
 
 ---
 
